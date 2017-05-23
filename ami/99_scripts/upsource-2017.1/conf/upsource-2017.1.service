@@ -1,0 +1,16 @@
+[Unit]
+Description=JetBrains Upsource
+Requires=network.target
+After=syslog.target network.target
+
+[Service]
+Type=forking
+User=root
+TimeoutStartSec=10min
+PIDFile=/opt/upsource-2017.1.1781/logs/upsource.pid
+ExecStart=/opt/upsource-2017.1.1781/bin/upsource.sh start
+ExecStop=/opt/upsource-2017.1.1781/bin/upsource.sh stop
+ExecReload=/opt/upsource-2017.1.1781/bin/upsource.sh restart
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,3 @@
+Defaults !secure_path
+Defaults env_keep += "PATH RBENV_ROOT"
+

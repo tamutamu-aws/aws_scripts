@@ -1,0 +1,2 @@
+MAILTO=root
+0 3 * * * root /opt/clamav/clamav.sh

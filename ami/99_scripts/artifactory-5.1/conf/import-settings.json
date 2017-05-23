@@ -1,0 +1,7 @@
+{
+  "importPath" : "/tmp/artifactory_imp/",
+  "includeMetadata" : true,
+  "verbose" : false,
+  "failOnError" : false,
+  "failIfEmpty" : false
+}

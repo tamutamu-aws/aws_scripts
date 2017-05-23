@@ -1,0 +1,13 @@
+[Unit]
+Description=WebLogic Admin Server
+After=syslog.target network.target
+
+[Service]
+Environment="JAVA_OPTIONS=-Djava.security.egd=file:/dev/./urandom"
+ExecStart=/opt/weblogic-12c/home/user_projects/domains/#DOMAIN#/bin/startWebLogic.sh
+ExecStop=/opt/weblogic-12c/home/user_projects/domains/#DOMAIN#/bin/stopWebLogic.sh
+Restart=on-abort
+User=#INSTALL_USER#
+
+[Install]
+WantedBy=multi-user.target
